@@ -9,6 +9,9 @@
         </div>
 </form>
 
+<hr> 
+<a href="index.php?controller=velo&task=index" class="btn btn-success">Accedez a l'examen</a>
+
 <main>
     <h3>Documentation</h3>
     <h4>Sommaire</h4>

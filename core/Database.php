@@ -4,7 +4,7 @@ class Database
     public static function getPdo(){
 
 
-        $pdo = new PDO('mysql:host=localhost;dbname=ExempleDb','ExempleUsername' ,'ExemplePassword', [
+        $pdo = new PDO('mysql:host=localhost;dbname=exam2','exam2' ,'exam2', [
                 PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
                 PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
                 PDO::ATTR_PERSISTENT
