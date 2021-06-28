@@ -29,6 +29,24 @@ class Voyage extends Model
         return $voyage;
     }
 
+
+    /**
+     * count un voyage
+     * 
+     */
+
+    function count(int $velo_id)
+    {
+
+
+        $resultat =  $this->pdo->prepare('SELECT * FROM voyages WHERE velo_id = :velo_id');
+        $resultat->execute(["velo_id"=> $velo_id]);
+
+        $voyageNb = $resultat->rowCount();
+
+        return $voyageNb;
+    }
+
     /**
      * insert un voyage
      * 

@@ -6,6 +6,10 @@
   <img class="card-img-top" src="<?php echo $velo["image"]; ?>" alt="Card image cap">
   <div class="card-body">
     <h5 class="card-title" style="color: black;" ><?php echo $velo["modele"]; ?></h5>
+    <p style="color: black;"><?php $modelVoyage = new \Model\Voyage();
+                $voyagesNb = $modelVoyage->count($velo["id"]);
+                echo $voyagesNb; 
+                ?> voyage</p>
     <p style="color: black;"><?php $modelLike = new \Model\Like();
                 $likeNb = $modelLike->count($velo["id"], "velo_id");
                 echo $likeNb; 
