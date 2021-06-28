@@ -10,7 +10,7 @@
 <?php if($voyages) {?>
     <h3>Les Voyages Assiosier</h3>
 
-    <a href="index.php?controller=voyage&task=add" class="btn btn-success">ajouter ce voyage</a>
+    <a href="index.php?controller=voyage&task=add&velo_id=<?php echo $velo['id']?>" class="btn btn-success">ajouter ce voyage</a>
 
     <?php foreach($voyages as $voyage){ ?>
 

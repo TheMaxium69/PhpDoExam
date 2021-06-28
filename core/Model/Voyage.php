@@ -29,5 +29,23 @@ class Voyage extends Model
         return $voyage;
     }
 
+    /**
+     * insert un voyage
+     * 
+     */
+
+    function insert(string $description, string $image, int $velo_id)
+    {
+
+        $maRequeteInsertRecipe = $this->pdo->prepare("INSERT INTO `voyages`(`description`, `image`, `velo_id`) VALUES (:description, :image, :velo_id)");
+
+        $maRequeteInsertRecipe->execute([
+            'description' => $description,
+            'image' => $image,
+            'velo_id' => $velo_id
+        ]);
+
+    }
+
 
 }
