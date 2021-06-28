@@ -77,25 +77,23 @@ class Voyage extends Controller
 
     }
 
-   /* public function edit(){
+   public function edit(){
 
-        if(!empty($_POST['name']) && !empty($_POST['gout']) && !empty($_POST['id']) && ctype_digit($_POST['id'])){
+        if(!empty($_POST['description']) && !empty($_POST['image']) && !empty($_POST['id']) && ctype_digit($_POST['id'])){
 
-            $gateau_id = $_POST['id'];
-            $name = htmlspecialchars($_POST['name']);
-            $gout = htmlspecialchars($_POST['gout']);
-
-
-            $this->model->update($gateau_id, $name, $gout);
+            $voyage_id = $_POST['id'];
+            $description = htmlspecialchars($_POST['description']);
+            $image = htmlspecialchars($_POST['image']);
 
 
-            \Http::redirect("index.php?controller=gateau&task=show&id=$gateau_id");
+            $this->model->update($voyage_id, $description, $image);
 
-
+            $velo_id = $_POST['velo_id'];
+            \Http::redirect("index.php?controller=velo&task=show&id=$velo_id");
         }else{
             die('tu essayes de faire quoi la ?');
         }
-    }*/
+    }
 
 }
 
