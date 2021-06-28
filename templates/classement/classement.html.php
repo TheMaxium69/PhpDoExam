@@ -1,6 +1,5 @@
-<a href="index.php?controller=classement&task=index" class="btn btn-info">Classement de like</a>
-  
-<?php foreach($velos as $velo){ ?>
+<h1>Classement des velos par nombre de like</h1>
+<?php foreach($velosOrder as $velo){ ?>
 
 <div class="card" style="width: 18rem;">
   <img class="card-img-top" src="<?php echo $velo["image"]; ?>" alt="Card image cap">
