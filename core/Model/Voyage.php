@@ -65,5 +65,25 @@ class Voyage extends Model
     }
 
 
+    function updateLike(int $id, int $likeNb) : void
+    {
+        $maRequeteUpdateLikeVoyage = $this->pdo->prepare("UPDATE `voyages` SET `likes`=:likes WHERE `id`=:id");
+
+        $maRequeteUpdateLikeVoyage->execute([
+            'id' => $id,
+            'likes' => $likeNb
+        ]);
+    }
+
+    function orderAll() 
+    {
+        $maRequeteOrderLikeVoyage = $this->pdo->query("SELECT *
+        FROM `voyages`
+        ORDER BY `voyages`.`likes` DESC");
+
+        $velosOrder = $maRequeteOrderLikeVoyage->fetchAll();
+
+        return $velosOrder;
+    }
 
 }

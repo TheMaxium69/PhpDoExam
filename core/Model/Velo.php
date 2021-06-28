@@ -8,7 +8,7 @@ class Velo extends Model
 
     protected $table = "velos";
     
-    function addLike(int $id, int $likeNb) : void
+    function updateLike(int $id, int $likeNb) : void
     {
         $maRequeteUpdateLikeVelo = $this->pdo->prepare("UPDATE `velos` SET `likes`=:likes WHERE `id`=:id");
 
