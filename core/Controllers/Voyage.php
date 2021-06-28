@@ -68,13 +68,8 @@ class Voyage extends Controller
                 $titreDeLaPage = "Editer $voyageName";
                 \Rendering::render('voyage/voyageform',
                     compact('voyage','titreDeLaPage'));
-
             }
-
-
-
         }
-
     }
 
    public function edit(){
